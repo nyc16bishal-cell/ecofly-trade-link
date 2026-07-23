@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecofly Trade Link — Electric Mopeds, Direct From Janakpur Dham</title>
+<meta name="description" content="Ecofly Trade Link — the first manufacturer and distributor of eco-friendly electric mopeds in Janakpur Dham, Nepal. No middlemen, no markup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B2B1F;
+    --forest:#2C4A3B;
+    --forest-deep:#1E3529;
+    --forest-soft:#4C6E58;
+    --paper:#F3F6EF;
+    --paper-alt:#E9EFE2;
+    --card:#FDFDFB;
+    --gold:#C0862B;
+    --gold-deep:#9C6C1F;
+    --line:#D6DECC;
+    --line-soft:#E3E9DA;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    line-height:1.08;
+    margin:0;
+    color:var(--forest-deep);
+  }
+  p{margin:0;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .mono{font-family:'JetBrains Mono', monospace;}
+  .wrap{
+    max-width:1160px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    font-weight:500;
+  }
+  ::selection{background:var(--gold); color:#fff;}
+  :focus-visible{outline:2.5px solid var(--gold); outline-offset:3px;}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(243,246,239,.9);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 32px;
+    max-width:1160px; margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand img{height:42px; width:auto;}
+  .brand-name{font-family:'Fraunces', serif; font-weight:600; font-size:19px; color:var(--forest-deep); letter-spacing:.01em;}
+  .brand-name span{display:block; font-family:'JetBrains Mono', monospace; font-weight:400; font-size:10px; letter-spacing:.16em; color:var(--forest-soft); text-transform:uppercase; margin-top:1px;}
+  nav.links{display:flex; gap:34px; align-items:center;}
+  nav.links a{font-size:14.5px; font-weight:500; color:var(--forest-deep); position:relative; padding:4px 0;}
+  nav.links a::after{content:""; position:absolute; left:0; right:0; bottom:0; height:1.5px; background:var(--gold); transform:scaleX(0); transform-origin:right; transition:transform .25s ease;}
+  nav.links a:hover::after{transform:scaleX(1); transform-origin:left;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Work Sans', sans-serif; font-weight:600; font-size:14.5px;
+    padding:11px 22px; border-radius:999px;
+    border:1.5px solid var(--forest); color:var(--forest-deep);
+    transition:all .2s ease; cursor:pointer; background:transparent;
+    white-space:nowrap;
+  }
+  .btn:hover{background:var(--forest); color:#fff;}
+  .btn-solid{background:var(--forest); color:#fff; border-color:var(--forest);}
+  .btn-solid:hover{background:var(--forest-deep); border-color:var(--forest-deep);}
+  .btn-gold{background:var(--gold); border-color:var(--gold); color:#fff;}
+  .btn-gold:hover{background:var(--gold-deep); border-color:var(--gold-deep);}
+  .menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px;}
+  .menu-toggle svg{width:26px; height:26px; stroke:var(--forest-deep);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative; overflow:hidden;
+    padding:88px 0 40px;
+    background:
+      radial-gradient(680px 420px at 82% -6%, rgba(44,74,59,.09), transparent 60%),
+      radial-gradient(520px 360px at 8% 110%, rgba(192,134,43,.10), transparent 60%);
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center;
+  }
+  .badge-strip{
+    display:inline-flex; align-items:center; gap:9px;
+    background:var(--card); border:1px solid var(--line);
+    padding:7px 14px 7px 8px; border-radius:999px; margin-bottom:26px;
+  }
+  .badge-dot{width:8px; height:8px; border-radius:50%; background:var(--gold);}
+  .badge-strip span{font-size:12.5px; font-weight:600; color:var(--forest-deep); font-family:'JetBrains Mono', monospace; letter-spacing:.02em;}
+  .hero h1{
+    font-size:clamp(38px, 4.6vw, 62px);
+    letter-spacing:-.01em;
+  }
+  .hero h1 em{font-style:italic; font-weight:500; color:var(--gold-deep);}
+  .hero p.lede{
+    margin-top:22px; max-width:490px;
+    font-size:17.5px; color:var(--forest-soft); line-height:1.65;
+  }
+  .hero-ctas{display:flex; gap:14px; margin-top:34px; flex-wrap:wrap;}
+  .hero-phone{
+    margin-top:26px; display:flex; align-items:center; gap:10px;
+    font-family:'JetBrains Mono', monospace; font-size:14px; color:var(--forest-deep);
+  }
+  .hero-phone svg{width:16px; height:16px; stroke:var(--gold-deep); flex-shrink:0;}
+  .hero-visual{
+    position:relative;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:26px;
+    padding:38px 30px 26px;
+    box-shadow:0 30px 60px -30px rgba(30,53,41,.35);
+  }
+  .hero-visual svg{width:100%; height:auto;}
+  .hero-visual-caption{
+    display:flex; justify-content:space-between; align-items:baseline;
+    margin-top:18px; padding-top:16px; border-top:1px dashed var(--line);
+  }
+  .hero-visual-caption .k{font-size:11.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--forest-soft); font-family:'JetBrains Mono', monospace;}
+  .hero-visual-caption .v{font-family:'JetBrains Mono', monospace; font-weight:700; color:var(--forest-deep); font-size:16px;}
+  .leaf-spin{animation:spin-slow 22s linear infinite; transform-origin:center;}
+  @keyframes spin-slow{to{transform:rotate(360deg);}}
+  @media (prefers-reduced-motion: reduce){.leaf-spin{animation:none;}}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:96px 0;}
+  .section-head{max-width:620px; margin-bottom:56px;}
+  .section-head h2{font-size:clamp(28px, 3.2vw, 40px); margin-top:12px;}
+  .section-head p{margin-top:14px; color:var(--forest-soft); font-size:16.5px;}
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- DIRECT LINE (signature) ---------- */
+  .direct-line{background:var(--forest-deep); color:#EFF3EA;}
+  .direct-line .eyebrow{color:#D9C08A;}
+  .direct-line h2{color:#FBFAF6;}
+  .direct-line .section-head p{color:#B9C9B9;}
+  .chains{display:flex; flex-direction:column; gap:34px; margin-top:20px;}
+  .chain-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:20px; padding:28px 30px 24px;
+  }
+  .chain-label{display:flex; justify-content:space-between; align-items:center; margin-bottom:22px; flex-wrap:wrap; gap:10px;}
+  .chain-label .name{font-family:'Fraunces', serif; font-weight:600; font-size:19px; color:#FBFAF6;}
+  .chain-label .tag{font-family:'JetBrains Mono', monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; padding:5px 11px; border-radius:999px;}
+  .tag-old{background:rgba(190,90,60,.18); color:#E7A98E;}
+  .tag-new{background:rgba(192,134,43,.22); color:#F0C877;}
+  .chain-row{display:flex; align-items:stretch; gap:0; overflow-x:auto; padding-bottom:6px;}
+  .chain-node{
+    flex:1 1 0; min-width:118px;
+    display:flex; flex-direction:column; align-items:center; text-align:center;
+    padding:0 6px; position:relative;
+  }
+  .chain-node .stop{
+    font-family:'Work Sans'; font-weight:600; font-size:13px; color:#EFF3EA;
+    margin-top:10px;
+  }
+  .chain-node .mono-small{font-family:'JetBrains Mono', monospace; font-size:11.5px; color:#9FB39E; margin-top:3px;}
+  .chain-node .dot{width:13px; height:13px; border-radius:50%; background:var(--gold); border:3px solid var(--forest-deep); box-shadow:0 0 0 1.5px rgba(255,255,255,.25); z-index:2;}
+  .chain-node.final .dot{background:#EFF3EA;}
+  .chain-connector{
+    flex:0 0 34px; align-self:center; height:2px; background:rgba(255,255,255,.22); margin-top:-30px;
+    position:relative; top:-19px;
+  }
+  .chain-row.old .chain-connector{background:linear-gradient(90deg, rgba(231,169,142,.3), rgba(231,169,142,.55));}
+  .chain-row.new .chain-connector{background:rgba(240,200,119,.55);}
+  .price-final{
+    display:flex; justify-content:flex-end; align-items:baseline; gap:8px; margin-top:18px; padding-top:16px; border-top:1px dashed rgba(255,255,255,.15);
+  }
+  .price-final .k{font-size:12px; color:#B9C9B9; font-family:'JetBrains Mono', monospace; text-transform:uppercase; letter-spacing:.08em;}
+  .price-final .v{font-family:'JetBrains Mono', monospace; font-weight:700; font-size:24px;}
+  .price-final.old .v{color:#E7A98E;}
+  .price-final.new .v{color:#F0C877;}
+  .savings-strip{
+    margin-top:26px; display:flex; align-items:center; justify-content:center; gap:12px;
+    background:rgba(192,134,43,.14); border:1px solid rgba(240,200,119,.3);
+    border-radius:14px; padding:16px 20px; text-align:center; flex-wrap:wrap;
+  }
+  .savings-strip strong{font-family:'JetBrains Mono', monospace; color:#F0C877; font-size:19px;}
+  .savings-strip span{color:#D9E3D4; font-size:14.5px;}
+
+  /* ---------- SPECS ---------- */
+  .specs-wrap{display:grid; grid-template-columns:.95fr 1.05fr; gap:54px; align-items:center;}
+  .spec-visual{
+    background:var(--card); border:1px solid var(--line); border-radius:24px; padding:34px;
+  }
+  .spec-grid{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:16px; overflow:hidden;}
+  .spec-item{background:var(--card); padding:22px 20px;}
+  .spec-item .k{font-family:'JetBrains Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.09em; color:var(--forest-soft);}
+  .spec-item .v{font-family:'JetBrains Mono', monospace; font-weight:700; font-size:23px; color:var(--forest-deep); margin-top:6px;}
+  .spec-item .u{font-size:12.5px; color:var(--forest-soft); font-weight:400; margin-left:3px;}
+  .spec-note{font-size:12.5px; color:var(--forest-soft); margin-top:14px; font-style:italic;}
+
+  /* ---------- WHY ECO ---------- */
+  .why-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:26px;}
+  .why-card{
+    background:var(--card); border:1px solid var(--line); border-radius:20px; padding:30px 26px;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .why-card:hover{transform:translateY(-5px); box-shadow:0 20px 40px -24px rgba(30,53,41,.3); border-color:var(--forest-soft);}
+  .why-card svg{width:34px; height:34px; stroke:var(--forest); margin-bottom:18px;}
+  .why-card h3{font-size:19px; margin-bottom:8px;}
+  .why-card p{color:var(--forest-soft); font-size:14.5px;}
+
+  /* ---------- LOCATION ---------- */
+  .loc-wrap{display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--line); border-radius:24px; overflow:hidden; background:var(--card);}
+  .loc-info{padding:44px 42px;}
+  .loc-info .addr{font-family:'Fraunces', serif; font-weight:500; font-size:24px; color:var(--forest-deep); margin-top:14px; line-height:1.35;}
+  .loc-list{margin-top:26px; display:flex; flex-direction:column; gap:16px;}
+  .loc-list-item{display:flex; gap:12px; align-items:flex-start;}
+  .loc-list-item svg{width:18px; height:18px; stroke:var(--gold-deep); flex-shrink:0; margin-top:2px;}
+  .loc-list-item .t{font-size:14.5px; color:var(--ink);}
+  .loc-list-item .t b{font-family:'JetBrains Mono', monospace; font-weight:600;}
+  .loc-map{
+    background:
+      linear-gradient(var(--paper-alt) 1px, transparent 1px) 0 0/34px 34px,
+      linear-gradient(90deg, var(--paper-alt) 1px, transparent 1px) 0 0/34px 34px,
+      var(--paper);
+    position:relative; min-height:340px;
+    display:flex; align-items:center; justify-content:center;
+    border-left:1px solid var(--line);
+  }
+  .pin-mark{display:flex; flex-direction:column; align-items:center;}
+  .pin-mark svg{width:52px; height:52px;}
+  .pin-mark .ring{width:78px; height:78px; border-radius:50%; border:1.5px dashed var(--forest-soft); position:absolute; animation:pulse-ring 3s ease-in-out infinite;}
+  @keyframes pulse-ring{0%,100%{transform:scale(1); opacity:.55;} 50%{transform:scale(1.18); opacity:.15;}}
+  .pin-mark .label{margin-top:10px; font-family:'JetBrains Mono', monospace; font-size:12px; background:var(--forest-deep); color:#fff; padding:5px 12px; border-radius:999px; letter-spacing:.03em;}
+  @media (prefers-reduced-motion: reduce){.pin-mark .ring{animation:none;}}
+
+  /* ---------- CONTACT ---------- */
+  .contact-wrap{display:grid; grid-template-columns:.9fr 1.1fr; gap:54px;}
+  .contact-side h2{font-size:clamp(26px, 3vw, 36px);}
+  .contact-side p{margin-top:14px; color:var(--forest-soft); font-size:16px; max-width:400px;}
+  .contact-card{
+    margin-top:30px; padding:22px 24px; background:var(--forest); border-radius:18px; color:#fff;
+  }
+  .contact-card .k{font-family:'JetBrains Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:#BFD3C3;}
+  .contact-card .phone{font-family:'JetBrains Mono', monospace; font-weight:700; font-size:26px; margin-top:6px;}
+  .form-card{background:var(--card); border:1px solid var(--line); border-radius:22px; padding:34px;}
+  .field{margin-bottom:20px;}
+  .field label{display:block; font-size:13px; font-weight:600; color:var(--forest-deep); margin-bottom:7px; font-family:'JetBrains Mono', monospace; letter-spacing:.02em; text-transform:uppercase;}
+  .field input, .field select, .field textarea{
+    width:100%; padding:13px 15px; border-radius:11px; border:1.5px solid var(--line);
+    font-family:'Work Sans', sans-serif; font-size:15px; background:#fff; color:var(--ink);
+    transition:border-color .2s ease;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{border-color:var(--forest); outline:none;}
+  .field textarea{resize:vertical; min-height:90px;}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .form-submit{width:100%; justify-content:center; padding:14px; font-size:15.5px; margin-top:6px;}
+  .form-hint{font-size:12.5px; color:var(--forest-soft); margin-top:12px; text-align:center;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--forest-deep); color:#CFDBCF; padding:56px 0 26px;}
+  .foot-top{display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:32px; padding-bottom:36px; border-bottom:1px solid rgba(255,255,255,.1);}
+  .foot-brand{display:flex; align-items:center; gap:12px;}
+  .foot-brand img{height:46px; background:#fff; border-radius:10px; padding:4px;}
+  .foot-brand-name{font-family:'Fraunces', serif; font-weight:600; font-size:20px; color:#fff;}
+  .foot-brand-name span{display:block; font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:#9FB39E; margin-top:2px;}
+  .foot-cols{display:flex; gap:64px; flex-wrap:wrap;}
+  .foot-col .h{font-family:'JetBrains Mono', monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:.1em; color:#9FB39E; margin-bottom:14px;}
+  .foot-col a, .foot-col p{display:block; font-size:14.5px; color:#D9E3D4; margin-bottom:9px;}
+  .foot-col a:hover{color:#F0C877;}
+  .foot-bottom{display:flex; justify-content:space-between; padding-top:22px; font-size:12.5px; color:#87997F; flex-wrap:wrap; gap:10px;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 920px){
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+    .hero-grid{grid-template-columns:1fr; gap:40px;}
+    .specs-wrap{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr;}
+    .loc-wrap{grid-template-columns:1fr;}
+    .loc-map{border-left:none; border-top:1px solid var(--line); min-height:260px;}
+    .contact-wrap{grid-template-columns:1fr;}
+    section{padding:64px 0;}
+    .wrap{padding:0 20px;}
+    .form-row{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <img src="ecofly-logo.png" alt="Ecofly Trade Link logo">
+      <span class="brand-name">Ecofly Trade Link<span>Janakpur Dham</span></span>
+    </a>
+    <nav class="links">
+      <a href="#direct-line">Why We're Cheaper</a>
+      <a href="#moped">The Moped</a>
+      <a href="#eco">Why Electric</a>
+      <a href="#location">Visit Us</a>
+      <a href="#contact" class="btn btn-solid" style="padding:10px 20px;">Get a Quote</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" onclick="document.querySelector('nav.links').classList.toggle('mobile-open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="padding-top:64px;">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="badge-strip">
+          <span class="badge-dot"></span>
+          <span>First Manufacturer &amp; Distributor · Janakpur Dham</span>
+        </div>
+        <h1>No middlemen.<br>No markup.<br><em>Just the moped.</em></h1>
+        <p class="lede">Ecofly Trade Link builds and distributes electric mopeds straight out of Janakpur Dham — so the price you're quoted is the price we made it for, not a number six hands upstream decided on.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-gold">Get a Quote</a>
+          <a href="tel:+9779869995953" class="btn">Call +977 986-999-5953</a>
+        </div>
+        <div class="hero-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.4-3.2-8-7.5-8-12a8 8 0 0116 0c0 4.5-3.6 8.8-8 12z"/><circle cx="12" cy="9" r="2.6"/></svg>
+          <span>Pull Chowk, Yadukuha (Sahidnagar), Janakpur Dham, Nepal</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal in">
+        <svg viewBox="0 0 460 300" fill="none">
+          <!-- ground line -->
+          <line x1="20" y1="248" x2="440" y2="248" stroke="#D6DECC" stroke-width="1.5" stroke-dasharray="2 6"/>
+          <!-- leaf accent -->
+          <g class="leaf-spin" transform="translate(70,90)">
+            <path d="M0 22C0 9 10 -2 24 0c1 14-9 24-24 22z" fill="none" stroke="#C0862B" stroke-width="2.4" stroke-linejoin="round"/>
+            <path d="M2 20L20 2" stroke="#C0862B" stroke-width="2" stroke-linecap="round"/>
+          </g>
+          <!-- moped body -->
+          <g stroke="#2C4A3B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <path d="M130 210c0-34 26-56 58-56h96c22 0 36 14 46 34l16 26"/>
+            <path d="M226 154V118c0-10 8-16 18-16h20"/>
+            <path d="M172 210h108"/>
+          </g>
+          <circle cx="168" cy="216" r="30" fill="#F3F6EF" stroke="#2C4A3B" stroke-width="6"/>
+          <circle cx="168" cy="216" r="8" fill="#2C4A3B"/>
+          <circle cx="330" cy="216" r="30" fill="#F3F6EF" stroke="#2C4A3B" stroke-width="6"/>
+          <circle cx="330" cy="216" r="8" fill="#2C4A3B"/>
+          <!-- charge bolt -->
+          <path d="M256 176l-14 22h16l-14 22" stroke="#C0862B" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <div class="hero-visual-caption">
+          <div><div class="k">Fuel</div><div class="v">Electric</div></div>
+          <div><div class="k">Built in</div><div class="v">Janakpur</div></div>
+          <div><div class="k">Sold by</div><div class="v">Us, direct</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECT LINE — SIGNATURE SECTION -->
+  <section class="direct-line" id="direct-line">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">The Direct Line</span>
+        <h2>Every hand it passes through adds a price. We cut the hands.</h2>
+        <p>A moped sold the usual way changes hands four times before it reaches you — and each hand takes a cut. Ecofly manufactures and sells directly, so there's only one hand between the factory and your driveway: ours.</p>
+      </div>
+
+      <div class="chains">
+        <div class="chain-card reveal">
+          <div class="chain-label">
+            <span class="name">The usual way</span>
+            <span class="tag tag-old">4 markups</span>
+          </div>
+          <div class="chain-row old">
+            <div class="chain-node"><div class="dot"></div><div class="stop">Factory</div><div class="mono-small">base price</div></div>
+            <div class="chain-connector"></div>
+            <div class="chain-node"><div class="dot"></div><div class="stop">Importer</div><div class="mono-small">+ margin</div></div>
+            <div class="chain-connector"></div>
+            <div class="chain-node"><div class="dot"></div><div class="stop">Regional Distributor</div><div class="mono-small">+ margin</div></div>
+            <div class="chain-connector"></div>
+            <div class="chain-node"><div class="dot"></div><div class="stop">Local Dealer</div><div class="mono-small">+ margin</div></div>
+            <div class="chain-connector"></div>
+            <div class="chain-node final"><div class="dot"></div><div class="stop">You</div><div class="mono-small">pay it all</div></div>
+          </div>
+          <div class="price-final old"><span class="k">Sticker price</span><span class="v">Rs. 1,85,000+</span></div>
+        </div>
+
+        <div class="chain-card reveal">
+          <div class="chain-label">
+            <span class="name">The Ecofly way</span>
+            <span class="tag tag-new">0 markups</span>
+          </div>
+          <div class="chain-row new">
+            <div class="chain-node"><div class="dot"></div><div class="stop">Ecofly Factory Floor</div><div class="mono-small">Janakpur Dham</div></div>
+            <div class="chain-connector"></div>
+            <div class="chain-node final"><div class="dot"></div><div class="stop">You</div><div class="mono-small">pay only this</div></div>
+          </div>
+          <div class="price-final new"><span class="k">Ecofly price</span><span class="v">Rs. 1,25,000</span></div>
+        </div>
+      </div>
+
+      <div class="savings-strip reveal">
+        <strong>~Rs. 60,000 saved</strong>
+        <span>— the same moped, minus four middlemen. Ask us for the current quote.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECS -->
+  <section id="moped">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">The Moped</span>
+        <h2>Built for Janakpur's roads, priced for Janakpur's riders.</h2>
+        <p>One clean, dependable electric moped — no confusing trims, no hidden add-ons. Ask us for the full spec sheet and current pricing when you call.</p>
+      </div>
+      <div class="specs-wrap">
+        <div class="spec-visual reveal">
+          <svg viewBox="0 0 400 240" fill="none">
+            <line x1="10" y1="200" x2="390" y2="200" stroke="#D6DECC" stroke-width="1.5" stroke-dasharray="2 6"/>
+            <g stroke="#2C4A3B" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+              <path d="M100 168c0-28 21-46 47-46h78c18 0 29 11 37 27l13 21"/>
+              <path d="M182 122V92c0-8 6-13 15-13h16"/>
+              <path d="M136 168h86"/>
+            </g>
+            <circle cx="132" cy="174" r="24" fill="#FDFDFB" stroke="#2C4A3B" stroke-width="5.5"/>
+            <circle cx="132" cy="174" r="6" fill="#2C4A3B"/>
+            <circle cx="266" cy="174" r="24" fill="#FDFDFB" stroke="#2C4A3B" stroke-width="5.5"/>
+            <circle cx="266" cy="174" r="6" fill="#2C4A3B"/>
+            <rect x="176" y="150" width="30" height="16" rx="3" stroke="#C0862B" stroke-width="3.5" fill="none"/>
+            <line x1="182" y1="150" x2="182" y2="144" stroke="#C0862B" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="200" y1="150" x2="200" y2="144" stroke="#C0862B" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+          <p class="spec-note">Illustrative line art — final unit specifications confirmed at time of quote.</p>
+        </div>
+        <div class="spec-grid reveal">
+          <div class="spec-item"><div class="k">Range / charge</div><div class="v">80<span class="u">km</span></div></div>
+          <div class="spec-item"><div class="k">Top speed</div><div class="v">55<span class="u">km/h</span></div></div>
+          <div class="spec-item"><div class="k">Full charge time</div><div class="v">3.5<span class="u">hrs</span></div></div>
+          <div class="spec-item"><div class="k">Battery</div><div class="v">Li-ion<span class="u">removable</span></div></div>
+          <div class="spec-item"><div class="k">Running cost</div><div class="v">~Rs. 1<span class="u">/ km</span></div></div>
+          <div class="spec-item"><div class="k">Warranty</div><div class="v">2<span class="u">yrs frame</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ELECTRIC -->
+  <section id="eco" style="background:var(--paper-alt);">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Why Electric</span>
+        <h2>Good for your wallet. Good for Janakpur's air.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3C7 8 5 12 5 15a7 7 0 0014 0c0-3-2-7-7-12z"/></svg>
+          <h3>Zero tailpipe emissions</h3>
+          <p>No exhaust, no fumes at the traffic light — just a quiet motor and cleaner air on your street.</p>
+        </div>
+        <div class="why-card reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+          <h3>Costs less to run</h3>
+          <p>Charging costs a fraction of petrol per kilometre, with far fewer moving parts to service.</p>
+        </div>
+        <div class="why-card reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-2a4 4 0 014-4h10a4 4 0 014 4v2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+          <h3>Quiet on busy streets</h3>
+          <p>A near-silent ride through Janakpur's markets and lanes — easier on neighbours and pedestrians alike.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="location">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Visit the Showroom</span>
+        <h2>Come see it, sit on it, take it for a spin.</h2>
+      </div>
+      <div class="loc-wrap reveal">
+        <div class="loc-info">
+          <span class="eyebrow">Address</span>
+          <p class="addr">Pull Chowk, Yadukuha<br>(Sahidnagar), Janakpur Dham<br>Nepal</p>
+          <div class="loc-list">
+            <div class="loc-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.4-3.2-8-7.5-8-12a8 8 0 0116 0c0 4.5-3.6 8.8-8 12z"/><circle cx="12" cy="9" r="2.6"/></svg>
+              <div class="t">Landmark: <b>Pull Chowk</b>, Yadukuha — near Sahidnagar</div>
+            </div>
+            <div class="loc-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3l20 9-9 4-4 9-7-22z"/></svg>
+              <div class="t">Call ahead for a live demo: <b>+977 9869995953</b></div>
+            </div>
+            <div class="loc-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              <div class="t">Open daily · <b>Sun – Fri</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="loc-map">
+          <div class="pin-mark">
+            <div class="ring"></div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2C4A3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.4-3.2-8-7.5-8-12a8 8 0 0116 0c0 4.5-3.6 8.8-8 12z"/><circle cx="12" cy="9" r="2.6" fill="#C0862B" stroke="none"/></svg>
+            <div class="label">Ecofly · Pull Chowk</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="background:var(--paper-alt);">
+    <div class="wrap contact-wrap">
+      <div class="contact-side reveal">
+        <span class="eyebrow">Get a Quote</span>
+        <h2>Tell us what you need. We'll call you back.</h2>
+        <p>Leave your number and we'll confirm current pricing, available colours, and test-ride times — or skip the form and just call us directly.</p>
+        <div class="contact-card">
+          <div class="k">Direct line</div>
+          <div class="phone">+977 9869995953</div>
+        </div>
+      </div>
+      <form class="form-card reveal" id="quoteForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="qname">Full name</label>
+            <input id="qname" name="name" type="text" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="qphone">Phone number</label>
+            <input id="qphone" name="phone" type="tel" placeholder="98XXXXXXXX" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="qcity">City / area</label>
+          <input id="qcity" name="city" type="text" placeholder="e.g. Janakpur Dham">
+        </div>
+        <div class="field">
+          <label for="qmsg">What would you like to know?</label>
+          <textarea id="qmsg" name="message" placeholder="Pricing, colours, test ride availability..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold form-submit">Send via WhatsApp</button>
+        <p class="form-hint">Opens WhatsApp with your details pre-filled to +977 9869995953</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <img src="ecofly-logo.png" alt="Ecofly Trade Link logo">
+        <div class="foot-brand-name">Ecofly Trade Link<span>Manufacturer &amp; Distributor</span></div>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <div class="h">Explore</div>
+          <a href="#direct-line">Why We're Cheaper</a>
+          <a href="#moped">The Moped</a>
+          <a href="#eco">Why Electric</a>
+        </div>
+        <div class="foot-col">
+          <div class="h">Visit</div>
+          <p>Pull Chowk, Yadukuha</p>
+          <p>(Sahidnagar), Janakpur Dham</p>
+          <p>Nepal</p>
+        </div>
+        <div class="foot-col">
+          <div class="h">Contact</div>
+          <a href="tel:+9779869995953">+977 9869995953</a>
+          <a href="https://wa.me/9779869995953" target="_blank" rel="noopener">WhatsApp us</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Ecofly Trade Link. First moped manufacturer &amp; distributor in Janakpur Dham.</span>
+      <span>Environment-friendly · Best price, direct.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.15});
+  revealEls.forEach(el=>io.observe(el));
+
+  // mobile menu
+  const style = document.createElement('style');
+  style.textContent = `
+    nav.links.mobile-open{
+      display:flex !important; flex-direction:column; align-items:flex-start; gap:18px;
+      position:absolute; top:100%; left:0; right:0; background:#F3F6EF;
+      padding:24px 32px; border-bottom:1px solid #D6DECC;
+    }`;
+  document.head.appendChild(style);
+
+  // quote form -> WhatsApp
+  document.getElementById('quoteForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('qname').value.trim();
+    const phone = document.getElementById('qphone').value.trim();
+    const city = document.getElementById('qcity').value.trim();
+    const msg = document.getElementById('qmsg').value.trim();
+    let text = `Hi Ecofly Trade Link, I'd like a quote.%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}`;
+    if(city) text += `%0AArea: ${encodeURIComponent(city)}`;
+    if(msg) text += `%0AMessage: ${encodeURIComponent(msg)}`;
+    window.open(`https://wa.me/9779869995953?text=${text}`, '_blank');
+  });
+</script>
+
+</body>
+</html>
